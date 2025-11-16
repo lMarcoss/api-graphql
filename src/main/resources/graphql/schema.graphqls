@@ -1,9 +1,15 @@
 type Query {
-    products: [Product]  # or whatever name you choose
+    policies: [Policy]  # or whatever name you choose
 }
 
-type Product {
-    id: ID!
-    nombre: String!
-    precio: String
+type Policy {
+    policyId: ID!
+    name: String!
+    coverages: [Coverage]
+}
+
+type Coverage {
+    coverageId: ID!
+    name: String!
+    description:String!
 }
